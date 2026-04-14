@@ -11,13 +11,15 @@ public class Player_Health : MonoBehaviour
 
     public delegate void HealthChangedHandler(float newhealth,float ammountChanged);
     public event HealthChangedHandler OnHealthChanged;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public delegate void HealthInitHandler(float MaxHP);
+    public event HealthInitHandler OnHealthInit;
     void Start()
     {
         Health = Max_Health;
+        OnHealthInit?.Invoke(Health);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -25,6 +27,7 @@ public class Player_Health : MonoBehaviour
 
     public void AddDamage(float damage)
     {
+
         if (Can_DMG)
         {
             Health -= damage;
@@ -32,7 +35,7 @@ public class Player_Health : MonoBehaviour
             Can_DMG = false;
             StartCoroutine(InvincibilityTimer(invincibilityTimer, ResetInvincibility));
         }
-        Debug.Log(Health);
+       
     }
 
     IEnumerator InvincibilityTimer(float time, Action callback)
@@ -44,14 +47,14 @@ public class Player_Health : MonoBehaviour
     private void ResetInvincibility()
     {
         Can_DMG = true;
-        Debug.Log(Can_DMG);
+        
 
     }
     public void AddHealth(float heal)
     {
         Health += heal;
         OnHealthChanged?.Invoke(Health, heal);
-        Debug.Log(Health);
+       
 
 
     }
