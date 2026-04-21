@@ -18,7 +18,6 @@ public class Coin_Script : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.GetComponent<Player_CoinCount>().AddCoin(value);
-        Destroy(gameObject);
-        
+        Destroy(gameObject); 
     }
 }

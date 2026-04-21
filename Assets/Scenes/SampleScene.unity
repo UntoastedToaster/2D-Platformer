@@ -2831,6 +2831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Money: 0
+  HealthComp: {fileID: 1048695808}
 --- !u!1001 &1055220054
 PrefabInstance:
   m_ObjectHideFlags: 0
