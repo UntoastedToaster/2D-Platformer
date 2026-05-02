@@ -4,7 +4,7 @@ using System.Collections;
 using System;
 
 public class UICoinPanel : MonoBehaviour
-{
+{   
     public TextMeshProUGUI coinText;
     public Player_CoinCount playerWealth;
     private float time = 0.5f;
