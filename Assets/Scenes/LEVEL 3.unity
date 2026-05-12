@@ -9391,8 +9391,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpforce: 10
+  max_jumpforce: 10
   max_speed: 10
   stopping_force: 5
+  max_jumps: 1
+  Nextjumpreducer: 0
+  dashforce: 15
 --- !u!114 &1048695803
 MonoBehaviour:
   m_ObjectHideFlags: 0
