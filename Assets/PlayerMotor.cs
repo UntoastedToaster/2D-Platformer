@@ -49,6 +49,16 @@ public class PlayerMotor : MonoBehaviour
         {
             transform.localScale = new Vector3(-scaleX, transform.localScale.y, transform.localScale.z);
         }
+
+        if (rigidbody2D.linearVelocityY < 0)
+        {
+            _animator.SetBool("IsFalling", true);
+        }
+        else
+        {
+            _animator.SetBool("IsFalling", false);
+        }
+
             MovePlayer();
         HandleMaxSpeed();
         PlayerStopping();
