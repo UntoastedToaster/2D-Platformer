@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour
 {
@@ -35,6 +36,11 @@ public class Player_Health : MonoBehaviour
             Can_DMG = false;
             StartCoroutine(InvincibilityTimer(invincibilityTimer, ResetInvincibility));
         }
+
+        if (Health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
        
     }
 
@@ -58,6 +64,8 @@ public class Player_Health : MonoBehaviour
 
 
     }
+
+    
 
     
 

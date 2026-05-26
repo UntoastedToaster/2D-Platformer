@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class randomizer : MonoBehaviour
 {
-    public float min;
-    public float max;
+    public float xpos;
+    public float ypos;
     public void TeleportFUN()
     {
-        transform.position = new Vector3(3, 3, 0);
+        xpos = Random.Range(30, 900);
+        ypos = Random.Range(25, 460);
+        transform.position = new Vector3(xpos, ypos, -1);
+        
     }
 }
