@@ -19,22 +19,42 @@ public class PlayerMotor : MonoBehaviour
     public float dashforce = 2;
     public float dashtime = 0.5f;
     private Rigidbody2D rigidbody2D;
-   
+    private Animator _animator;
+    private float scaleX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         multijump = max_jumps;
         jumpforce = max_jumpforce;
+        _animator = GetComponent<Animator>();
+        scaleX = transform.localScale.x;
     }
     // Update is called once per frame
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (direction.x !=0)
+        {
+            _animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            _animator.SetBool("IsMoving", false);
+        }
+        if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
+        }
+        else if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-scaleX, transform.localScale.y, transform.localScale.z);
+        }
+            MovePlayer();
         HandleMaxSpeed();
         PlayerStopping();
     }
 
+    
     private void MovePlayer()
     {
         rigidbody2D.AddForce(new Vector2(direction.x, 0) * speed);
