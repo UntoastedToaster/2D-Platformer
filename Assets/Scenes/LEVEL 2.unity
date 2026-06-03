@@ -1960,7 +1960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 441238037}
-  playerWealth: {fileID: 0}
+  playerWealth: {fileID: 1264570155}
 --- !u!1001 &925325334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2189,6 +2189,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef22b020dec4e9947bd81a5943122893, type: 3}
+--- !u!114 &944478132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3278826230522782643, guid: 8c78007187da7b5409e2db1137eae7aa, type: 3}
+  m_PrefabInstance: {fileID: 1264570154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37997ea11bfc8541b5a183fc59ad8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1011622533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2640,7 +2651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 1208452737}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 944478132}
 --- !u!114 &1163000526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,6 +3024,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c78007187da7b5409e2db1137eae7aa, type: 3}
+--- !u!114 &1264570155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8855229741515518723, guid: 8c78007187da7b5409e2db1137eae7aa, type: 3}
+  m_PrefabInstance: {fileID: 1264570154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2c5190d9b94c24abf9ff265919bb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1281144494
 MonoBehaviour:
   m_ObjectHideFlags: 0
