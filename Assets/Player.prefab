@@ -138,13 +138,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpforce: 10
-  max_jumpforce: 10
+  jumpforce: 8
+  max_jumpforce: 8
   max_speed: 10
   stopping_force: 5
   max_jumps: 1
-  Nextjumpreducer: 5
-  dashforce: 15
+  Nextjumpreducer: 2
+  dashforce: 20
   dashtime: 0.5
 --- !u!50 &5070976826703088899
 Rigidbody2D:
